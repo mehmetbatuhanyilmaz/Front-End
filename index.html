@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet"	href=".//still.css">
+
+<script type="text/javascript">
+	function equal(){
+		
+	document.getElementById ("opp2a").value=document.getElementById("opp2").value;
+		
+		document.getElementById ("texttitlea").value=document.getElementById("texttitle").value;
+		
+		
+		document.getElementById ("newd1a").value=document.getElementById("newd1").value;
+		
+		document.getElementById ("imgboxa").value=document.getElementById("imgbox").value;
+		
+		document.getElementById("previewimga").src = document.getElementById("previewimg").src;
+		  
+
+		
+	}
+	
+	
+	
+	</script>
+		
+
+	
+	
+	
+		
+<title>M. Batuhan Yilmaz_CaseStudy</title>
+</head>
+	
+<body>
+	
+<div id="op"></div>
+<div id="opp">New Tittle</div>
+<div id="opp2">	
+<div><input type="text" id="texttitle"  size="15" value="New Title" onfocus="this.select();"/></div>
+<br/>
+	
+<textarea id="newd1" style="resize:none; border: none; " rows="10" cols="30" onfocus="this.select();" maxlength="750" spellcheck="false" >New description</textarea><br/>
+
+	 <div id="imgbox"><div id="plussign" style="font-size: 7em;" onclick="afterclick(afterclick)">+</div>
+	 <input type="file" id="getfile" accept="image/*" style="display:none;">
+	 <img id="previewimg"/> </div><br/><br/>
+     
+	 
+
+	
+	
+  <div class="buttonHolder" onClick="equal()"> <a  class="button tick" ></a></div>
+   
+	
+</div>
+
+	
+	
+	
+	
+	
+	
+	<br/><br/>
+	<hr width="500" size="2" color="#32829B" id="lline">
+	<br/><br/>
+
+	
+	  
+	
+	
+
+<div id="opa"></div>
+<div id="oppa">New Tittle</div>
+<div id="opp2a">	
+<div><input type="text" id="texttitlea"  size="15" value="" onfocus="this.select();"/></div>
+<br/>
+	
+<textarea id="newd1a" style="resize:none; border: none; " rows="10" cols="30"  maxlength="750" spellcheck="false" ></textarea><br/>
+
+	 <div id="imgboxa"></div>
+	<img id="previewimga"/>
+	<br/><br/>
+
+</div>
+<br/><br/>
+
+
+
+<script type="text/javascript">
+	const plusSign = document.querySelector('#plussign');
+		const getFile = document.querySelector('#getfile');
+		
+		plusSign.addEventListener('click', function () { getFile.click(); });
+		getFile.addEventListener('change', function () { preview(getFile.files[0]); });
+		
+		function preview(file) {
+		  const img = document.querySelector('#previewimg');
+		  img.classList.add("obj");
+		  img.file = file;
+			
+	
+		  img.classList.add("obj");
+		  img.file = file;
+		
+		  const reader = new FileReader();
+		  reader.onload = (function(image) { return function(e) { image.src = e.target.result; }; })(img);
+		  reader.readAsDataURL(file);
+		}
+	
+	
+		function afterclick() { 
+	document.getElementById("plussign").style.display="none";}
+		</script> 
+
+	
+</body>
+</html>
